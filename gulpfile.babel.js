@@ -4,9 +4,26 @@ import gulpLoadPlugins from 'gulp-load-plugins';
 import browserSync from 'browser-sync';
 import del from 'del';
 import {stream as wiredep} from 'wiredep';
+//import pug from 'gulp-pug';
+var jade = require('gulp-jade');
 
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
+
+
+
+//gulp.task('jade', function build() {
+//  return gulp.src('app/**.pug')
+//      .pipe(pug())
+//      //.pipe(pug({ pretty: false }))
+//      .pipe(gulp.dest('dist/index.html'));
+//});
+
+gulp.task('jade', function() {
+  return gulp.src('app/**.jade')
+      .pipe(jade()) // pip to jade plugin
+      .pipe(gulp.dest('dist/index.html')); // tell gulp our output folder
+});
 
 gulp.task('styles', () => {
   return gulp.src('app/styles/*.scss')
@@ -90,7 +107,7 @@ gulp.task('extras', () => {
 
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 
-gulp.task('serve', ['styles', 'scripts', 'fonts'], () => {
+gulp.task('serve', ['jade','styles', 'scripts', 'fonts'], () => {
   browserSync({
     notify: false,
     port: 9000,
