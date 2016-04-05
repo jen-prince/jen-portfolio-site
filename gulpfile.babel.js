@@ -12,17 +12,11 @@ const reload = browserSync.reload;
 
 
 
-//gulp.task('jade', function build() {
-//  return gulp.src('app/**.pug')
-//      .pipe(pug())
-//      //.pipe(pug({ pretty: false }))
-//      .pipe(gulp.dest('dist/index.html'));
-//});
-
 gulp.task('jade', function() {
   return gulp.src('app/**.jade')
       .pipe(jade()) // pip to jade plugin
-      .pipe(gulp.dest('dist/index.html')); // tell gulp our output folder
+      .pipe(gulp.dest('app')) // tell gulp our output folder
+      .pipe(reload({stream: true}));
 });
 
 gulp.task('styles', () => {
@@ -126,6 +120,7 @@ gulp.task('serve', ['jade','styles', 'scripts', 'fonts'], () => {
   ]).on('change', reload);
 
   gulp.watch('app/styles/**/*.scss', ['styles']);
+  gulp.watch('app/**/*.jade', ['jade']);
   gulp.watch('app/scripts/**/*.js', ['scripts']);
   gulp.watch('app/fonts/**/*', ['fonts']);
   gulp.watch('bower.json', ['wiredep', 'fonts']);
