@@ -10,8 +10,6 @@ var jade = require('gulp-jade');
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
 
-
-
 gulp.task('jade', function() {
   return gulp.src('app/**.jade')
       .pipe(jade()) // pip to jade plugin
