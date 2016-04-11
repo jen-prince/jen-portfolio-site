@@ -10,12 +10,16 @@ $brand-secondary: #FFCE00;
 $brand-tertiary: #316468;
 $brand-quatiary: #FCE1E1;
 
+$brand-primary-lighter: lighten($brand-primary, 20%);
+
+
+// link color
 $cobalt: #009EC2;
 
 $light-grey: #F5F5F5;
 $dark-grey: #d8d8d8;
 $dark-dark-grey: #333;
-$white: #fafafa;
+$white: #fefefe;
 
 $gray-base:              #000 !default;
 $gray-darker:            lighten($gray-base, 13.5%) !default; // #222
@@ -94,7 +98,7 @@ $link-hover-decoration:      underline !default;
 // Set the number of columns and specify the width of the gutters.
 
 $grid-columns:               14;
-$grid-gutter-width:          1.875rem;
+$grid-gutter-width:          4.875rem;
 
 /*------------------------------------------------------------------*\
     NAV
@@ -162,7 +166,7 @@ $font-family-base:           $font-family-sans-serif !default;
 // Pixel value used to responsively scale all typography. Applied to the `<html>` element.
 // Typographic Scale Ratio 1.25
 
-$font-size-root:             16px !default;
+$font-size-root:             18px !default;
 
 $font-size-base:             1rem !default;
 $font-size-xxxl:             2.441rem;

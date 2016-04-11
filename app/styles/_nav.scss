@@ -1,3 +1,17 @@
+nav {
+  padding-bottom: 3rem;
+}
+
 .page-title {
   background-color: $brand-primary;
+  h1 {
+    color: $white;
+  }
+  h2 {
+    color: $brand-primary-lighter;
+  }
+}
+
+.profile-img {
+  width: 7rem;
 }
