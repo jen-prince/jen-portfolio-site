@@ -4,8 +4,13 @@ import gulpLoadPlugins from 'gulp-load-plugins';
 import browserSync from 'browser-sync';
 import del from 'del';
 import {stream as wiredep} from 'wiredep';
-//import pug from 'gulp-pug';
+
+
 var jade = require('gulp-jade');
+var svgstore = require('gulp-svgstore');
+var svgmin = require('gulp-svgmin');
+var path = require('path');
+
 
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
@@ -15,6 +20,24 @@ gulp.task('jade', function() {
       .pipe(jade()) // pip to jade plugin
       .pipe(gulp.dest('app')) // tell gulp our output folder
       .pipe(reload({stream: true}));
+});
+
+gulp.task('svgstore', function () {
+  return gulp
+      .src('app/images/svg-pre-compiled/*.svg')
+      .pipe(svgmin(function (file) {
+        var prefix = path.basename(file.relative, path.extname(file.relative));
+        return {
+          plugins: [{
+            cleanupIDs: {
+              prefix: prefix + '-',
+              minify: true
+            }
+          }]
+        }
+      }))
+      .pipe(svgstore())
+      .pipe(gulp.dest('app/images'));
 });
 
 gulp.task('styles', () => {
@@ -99,7 +122,7 @@ gulp.task('extras', () => {
 
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 
-gulp.task('serve', ['jade','styles', 'scripts', 'fonts'], () => {
+gulp.task('serve', ['jade','styles', 'scripts', 'fonts', 'svgstore'], () => {
   browserSync({
     notify: false,
     port: 9000,
