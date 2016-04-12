@@ -114,41 +114,6 @@ $btn-border-text-color: $brand-secondary;
 $btn-border-bg: transparent;
 $btn-border-border: $brand-secondary;
 
-/*------------------------------------------------------------------*\
-    TYPOGRAPHY
-\*------------------------------------------------------------------*/
-
-
-//** Background color for `<body>`.
-$body-bg:               #fff !default;
-//** Global text color on `<body>`.
-$text-color:            $gray-dark !default;
-
-//** Global textual link color.
-$link-color:            $brand-primary !default;
-//** Link hover color set via `darken()` function.
-$link-hover-color:      darken($link-color, 15%) !default;
-//** Link hover decoration.
-$link-hover-decoration: underline !default;
-
-
-//== Typography
-//## Font, line-height, and color for body text, headings, and more.
-
-$font-family-sans-serif:  "Open Sans", Helvetica, Arial, sans-serif;
-$font-family-accent:    Futura, 'Trebuchet MS', Arial, sans-serif; //"futura-pt",sans-serif;
-$font-family-base:        $font-family-sans-serif;
-
-
-$font-weight-normal:    300;
-
-$headings-font-family:   $font-family-accent;
-$headings-font-weight:    200;
-$headings-line-height:    1.1 !default;
-$headings-color:          $brand-secondary;
-
-$nav-font-family: $font-family-accent;
-
 
 
 /*------------------------------------------------------------------*\
@@ -157,7 +122,7 @@ $nav-font-family: $font-family-accent;
 
 // Font, line-height, and color for body text, headings, and more.
 
-$font-family-sans-serif:     "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-sans-serif:     "Open Sans", Helvetica, Arial, sans-serif;
 $font-family-serif:          Georgia, "Times New Roman", Times, serif !default;
 $font-family-accent:         Futura, 'Trebuchet MS', Arial, sans-serif; //"futura-pt",sans-serif;
 $font-family-monospace:      Menlo, Monaco, Consolas, "Courier New", monospace !default;
@@ -201,6 +166,8 @@ $headings-font-weight:       300;
 $headings-line-height:       1.1 !default;
 $headings-color:             $brand-secondary;
 $headings-kerning:           .3rem;
+
+$nav-font-family: $font-family-accent;
 
 $lead-font-size:             1.25rem !default;
 $lead-font-weight:           300 !default;
