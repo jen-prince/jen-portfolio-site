@@ -2,9 +2,12 @@
 // endbower
 
 @import "vars";
+@import "../bower_components/bootstrap/scss/bootstrap-flex";
+@import "icon";
 @import "nav";
 @import "type";
-@import "../bower_components/bootstrap/scss/bootstrap-flex";
+@import "buttons";
+
 
 
 body {
@@ -14,4 +17,14 @@ body {
 
 ul {
   list-style: none;
+}
+
+.triangle-bottomleft {
+  width: 0;
+  height: 0;
+  border-bottom: 100px solid $brand-quatiary;
+  border-right: 100px solid transparent;
+  position: relative;
+  left: -20px;
+  top: 20px;
 }

@@ -141,6 +141,7 @@ gulp.task('serve', ['jade','styles', 'scripts', 'fonts', 'svgstore'], () => {
   ]).on('change', reload);
 
   gulp.watch('app/styles/**/*.scss', ['styles']);
+  gulp.watch('app/**/*.svg', ['svgstore']);
   gulp.watch('app/**/*.jade', ['jade']);
   gulp.watch('app/scripts/**/*.js', ['scripts']);
   gulp.watch('app/fonts/**/*', ['fonts']);

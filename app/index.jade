@@ -23,7 +23,10 @@ script(src='/bower_components/modernizr/modernizr.js')
 <!-- endbuild -->
 
 body
+	<div style="height: 0; width: 0; position: absolute; visibility: hidden">
 	include ./images/svg-pre-compiled.svg
+	</div>
+
 
 	<!--[if lt IE 10]>
 	//p.browserupgrade You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -33,22 +36,24 @@ body
 		div.row
 			div.col-sm-4.col-sm-offset-1.page-title
 				h1.text-uppercase Jen Prince
-				h2.h3 Product Designer & Front-End Developer
+				h2.h4 Product Designer & Front-End Developer
 				img.profile-img(src='images/jen-pic.png', alt='Jen Prince')
-			ul.col-sm-1
-				li
-					a.btn.btn-info(href='#') contact me
+			div.col-sm-6
+				div.animation-nav
+			div.col-sm-3
+				a.btn.btn-info.btn-contact(href='#') Contact Me
 	div.container-fluid
 		div.row
 			div.block-summary.col-sm-6.col-sm-offset-1
-				p I am a product designer who also writes code that brings products to life. As Ethan Marcotte states “That old idea of ‘handoff’ between design and technology is where problems most commonly pop up.” I enjoy blending my knowledge of UX, design and development to create web applications that meet the needs of the user and the client.
+				svg.icon.icon-unicorns(viewBox="0 0 100 5.5")
+					use(xlink:href="#unicorns")
+				p.baseline-first-par-spacing I am a product designer who also writes code that brings products to life. As Ethan Marcotte states “That old idea of ‘handoff’ between design and technology is where problems most commonly pop up.” I enjoy blending my knowledge of UX, design and development to create web applications that meet the needs of the user and the client.
 
 			div.col-sm-5.col-sm-offset-1
 				h2 Education
-				p 2011-2014
-				p Denver University
-				p Master of Applied Sciences
-				p Web Design & Development
+				p 2011-2014 Denver University
+					span Master of Applied Sciences
+					span Web Design & Development
 
 				p 2001-2005
 				p Appalachian State University
@@ -91,12 +96,12 @@ body
 
 			div.col-sm-7.col-sm-offset-1
 				h2 Experience
-				h3 2014-2016 UX/UI Designer & Front-End Developer at Front Edge Digital
+				h3.h5 2014-2016 UX/UI Designer & Front-End Developer at Front Edge Digital
 				span (remote position)
 
 				p Clients ranged from enterprise level to small businesses. Conducted research to identify and understand the users, design goals and business context. Utilized  collaboration, critical thinking and an iterative design process. Developed wireframes, mockups, prototypes, visual style guides and style tiles to effectively communicate interaction and design ideas.  Implemented responsive designs using HTML5, CSS3, LESS, SASS, Angular.js, JavaScript, jQuery, Bootstrap, Jade, Grunt, Bower, Firebase, JSON and SVG with performance and accessibility in mind.   Within Agile methodology, utilitzed web service concepts such as REST.
 
-				h3 2011-2014 UI/UX Designer & Front-End Developer at Flatirons Solutions
+				h3.h5 2011-2014 UI/UX Designer & Front-End Developer at Flatirons Solutions
 				span (formerly InfoTrust Group)
 
 				p Conducted user interviews and user research to inform designs. Advocated for the customer during our product development process. Conducted Section 508 accessibility compliance audits for product offering and identified technical solutions.  Created visual designs and implemented for enterprise web application framework. Responsive design, web standards, usability, modularity and accessibility were all key components in implementations. Utilized technologies such as HTML5, CSS3 and XSLT, SASS, Twitter Bootstrap, Modernizer and XML.
@@ -124,7 +129,7 @@ body
 
 				p After undergrad, I was a finalist in a national woodworking competition for handmade furniture (I love woodworking!).  I also studied glass blowing at the Penland School of Craft.  Attention to detail, design decisions informed by the use of the product in the real world, as well as the design medium, embody what the word craftsmanship means to me.  I love that craftsmanship applies to code and process in software development.  A frictionless user flow, organized code, CSS with naming conventions and accessibility are the equivalent to me of a snug fitting dovetail joint.
 
-
+footer.triangle-bottomleft
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 script.

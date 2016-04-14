@@ -1,5 +1,5 @@
 nav {
-  padding-bottom: 3rem;
+  padding-bottom: 5rem;
 }
 
 .page-title {
@@ -9,9 +9,23 @@ nav {
   }
   h2 {
     color: $brand-primary-lighter;
+    padding-bottom: 1.05rem;
   }
+}
+
+.animation-nav {
+  background: repeating-linear-gradient( to right,
+          $brand-tertiary,
+          $brand-tertiary 1rem,
+          $white 1rem,
+          $white 2rem
+);
+  height: 2.5rem;
 }
 
 .profile-img {
   width: 7rem;
+  position: absolute;
+  left: -3.6rem;
+  bottom: -3.8rem;
 }
